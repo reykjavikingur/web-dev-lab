@@ -4,8 +4,22 @@
   "description": "Web front end development project starter",
   "main": "index.js",
   "scripts": {
+    "create": "gulp clean && gulp create",
+    "start": "gulp start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew Strader",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.3.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-util": "^3.0.8",
+    "rimraf": "^2.6.1",
+    "underscore": "^1.8.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
 }
