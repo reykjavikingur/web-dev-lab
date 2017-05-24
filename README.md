@@ -18,3 +18,4 @@ To initialize a new project with web-dev-lab:
 
 * use babel with browserify
 * use nodemon to restart everything when gulpfile.js or package.json changes
+* include .editorconfig
