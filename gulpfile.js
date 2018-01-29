@@ -23,16 +23,19 @@ gulp.task('serve', ['watch'], (cb) => {
     }, cb);
 });
 
-let pages = 'src/pages/**/*.html';
-
-gulp.task('create:pages', [], () => {
-    return gulp.src(pages)
-        .pipe(gulp.dest('dist'))
-        ;
+gulp.task('create:pages', [], (done) => {
+    const HandlebarsGenerator = require('handlebars-generator');
+    HandlebarsGenerator.generateSite('src/pages', 'dist')
+        .then(r => {
+            done();
+        }, e => {
+            done(e);
+        })
+    ;
 });
 
 gulp.task('watch:pages', ['create:pages'], () => {
-    gulp.watch(pages, ['create:pages']);
+    gulp.watch(['src/pages/**/*.html', 'src/pages/**/*.js'], ['create:pages']);
 });
 
 let staticFiles = 'src/static/**/*';

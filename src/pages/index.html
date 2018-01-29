@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Web Dev Lab</title>
+    <title>{{siteName}}</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
     <link rel="stylesheet" type="text/css" href="assets/styles/main.css"/>
 </head>
 <body>
-<h1>Web Dev Lab</h1>
-<p>It started apparently.</p>
+<h1>{{siteName}}</h1>
+<h2>{{appDescription}}</h2>
+
+<p>To modify this page, edit the files:
+<ul>
+    <li><code>src/pages/index.html</code></li>
+    <li><code>src/pages/index.js</code></li>
+</ul>
+</p>
+
+<h6>{{appName}} v{{appVersion}}</h6>
+
+<hr/>
+Copyright &copy; {{appAuthor}}
 
 <script type="text/javascript" src="assets/scripts/main.js"></script>
 </body>
